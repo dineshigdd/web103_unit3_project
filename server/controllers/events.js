@@ -12,8 +12,8 @@ export const  getEvents = async( req, res )=>{
 
 export const getEvent = async (req, res) => {
     // This must match the name in the router (eventId)
-    const id = req.params.eventId; 
-
+    const id = req.params.id; 
+    
     try {
         const results = await pool.query('SELECT * FROM events WHERE id = $1', [id]);
         

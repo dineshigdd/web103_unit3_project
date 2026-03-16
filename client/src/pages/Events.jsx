@@ -17,7 +17,8 @@ const Events = () => {
         <div className="events-page">
             <h1>All Community Events</h1>
             <div className="events-grid" style={{ display: 'flex', flexWrap: 'wrap' }}>
-                {events.map(event => (
+               
+                { events && events.map(event => (
                     <Event 
                         key={event.id}
                         id={event.id}
