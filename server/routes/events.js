@@ -7,4 +7,5 @@ router.get('/',EventsController.getEvents)
 router.get('/:id', EventsController.getEvent)
 
 
+
 export default router

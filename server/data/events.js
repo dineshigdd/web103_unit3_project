@@ -8,7 +8,7 @@ const events = [
     event_date: "2026-03-14",
     event_time: "19:30:00",
     remaining: "2026-03-14T19:30:00",
-    venue: "Echo Lounge",
+    venue: "echo lounge",
     genre: "Indie",
     ticket_price: 15,
     image: "/images/indie-night.png"
@@ -20,7 +20,7 @@ const events = [
     event_date: "2026-03-20",
     event_time: "21:00:00",
     remaining: "2026-03-20T21:00:00",
-    venue: "House of Blues",
+    venue: "house of blues",
     genre: "Hip-Hop",
     ticket_price: 25,
     image: "/images/hiphop-takeover.png"
@@ -32,7 +32,7 @@ const events = [
     event_date: "2026-03-10",
     event_time: "18:00:00",
     remaining: "2026-03-10T18:00:00",
-    venue: "Pavilion",
+    venue: "pavilion",
     genre: "Acoustic",
     ticket_price: 0,
     image: "/images/acoustic.png"
@@ -44,7 +44,7 @@ const events = [
     event_date: "2026-04-02",
     event_time: "20:00:00",
     remaining: "2026-04-02T20:00:00",
-    venue: "American Airlines Center",
+    venue: "american airlines center",
     genre: "EDM",
     ticket_price: 35,
     image: "/images/edm-glowfest.png"
