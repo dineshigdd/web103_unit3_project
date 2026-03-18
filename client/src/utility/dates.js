@@ -51,7 +51,7 @@ const dates = {
 
         if (diff <= 0) return "Event passed";
 
-        // Simple math to convert ms to days/hours
+        //to convert ms to days/hours
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
         const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
 
