@@ -9,7 +9,7 @@ const Events = () => {
     const [locations, setLocations] = useState([]);
     const [selectedLocation, setSelectedLocation] = useState('');
 
-    // 🔹 Load locations (once)
+    //Load locations (once)
     useEffect(() => {
         const fetchLocations = async () => {
             try {
@@ -60,7 +60,7 @@ const Events = () => {
     return (
         <div className="events-page">
             <div className="events-container">
-                <h1>All Community Events</h1>
+                <h1>All Music Events</h1>
 
                 <LocationDropdown
                     locations={locations}

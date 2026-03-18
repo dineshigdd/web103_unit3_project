@@ -43,11 +43,8 @@ const Locations = () => {
 
     return (
         <div className='available-locations'>
-            <div id='venue1button' className='venue1-button-overlay'>
-                <Link to='/echolounge' role='button'>{venueNames.venue1}</Link>
-               
-                    {/* <button>{venueNames.venue1}</button> */}
-              
+            <div id='venue1button' className='venue1-button-overlay'>        
+                    <button>{venueNames.venue1}</button>              
             </div>
 
             <div id='venue2button' className='venue2-button-overlay'>

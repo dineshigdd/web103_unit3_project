@@ -2,7 +2,6 @@ import React from 'react'
 import { useRoutes, Link } from 'react-router-dom'
 import Locations from './pages/Locations'
 import LocationEvents from './pages/LocationEvents'
-// import LocationDropdown from './components/ LocationDropdown'
 import Events from './pages/Events'
 import './App.css'
 
@@ -37,7 +36,9 @@ const App = () => {
   return (
     <div className='app'>
       <header className='main-header'>
-        <h1>UnityGrid Plaza</h1>       
+        <h1 className="app-title">
+           MusicPulse <span className="heart-icon">♥</span>
+        </h1>    
         <div className='header-buttons'>
           <Link to='/' role='button'>Home</Link>
           <Link to='/events' role='button'>Events</Link>         

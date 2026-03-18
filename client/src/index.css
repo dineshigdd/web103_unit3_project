@@ -35,8 +35,9 @@
     margin-bottom: 0px;
 }
 
+
 #root h1 {
-    font-family: Rock Salt, cursive;
+    font-family: Georgia, serif;
     font-size: 3em;
     font-weight: bold;
     text-shadow: 3px 3px 4px black;
@@ -75,4 +76,14 @@
 
 #root select {
     width: 400px;
+}
+
+#root .heart-icon {
+    color: #ff4d4d; /* Bright red */
+    font-style: normal; /* Keep the heart upright while text is italic */
+    font-size: 3.5rem;
+    /* This "pulse" animation makes it resemble a beat */
+    animation: pulse 1.5s infinite;
+    display: inline-block;
+    text-shadow: 0 0 10px rgba(255, 77, 77, 0.6);
 }
