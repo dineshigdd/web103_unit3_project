@@ -15,48 +15,50 @@ const Event = (props) => {
             try {
                 const eventData = await EventsAPI.getEventsById(props.id)
                 setEvent(eventData)
-                
             }
             catch (error) {
-                throw error
+                console.error(error)
             }
         }) ()
-    }, [])
+    }, [props.id]) // Added props.id as dependency for safety
 
     useEffect(() => {
-        (async () => {
-            try {
+        if (event.event_time) {
+            (async () => {
                 const result = await dates.formatTime(event.event_time)
                 setTime(result)
-            }
-            catch (error) {
-                throw error
-            }
-        }) ()
+            }) ()
+        }
     }, [event])
 
     useEffect(() => {
-        (async () => {
-            try {
+        if (event.remaining) {
+            (async () => {
                 const timeRemaining = await dates.formatRemainingTime(event.remaining)
                 setRemaining(timeRemaining)
-                dates.formatNegativeTimeRemaining(remaining, event.id)
-            }
-            catch (error) {
-                throw error
-            }
-        }) ()
+                // Removed the manual formatNegativeTimeRemaining call
+            }) ()
+        }
     }, [event])
 
+    // Minimum change: Determine the class based on the state
+    const isPassed = remaining === "Event passed";
+
     return (
-        <article className='event-information'>
-            <img src={event.image} />
+        /* The React Way: Conditionally add the 'event-passed' class */
+        <article className={`event-information ${isPassed ? 'event-passed' : ''}`}>
+            {isPassed && <div className="passed-badge">PASSED</div>}
+            
+            <img src={event.image} alt={event.title} />
 
             <div className='event-information-overlay'>
                 <div className='text'>
-                    <h3>{event.title}</h3>
-                    <p><i className="fa-regular fa-calendar fa-bounce"></i>{ dates.formatDate(event.event_date)} <br /> {time}</p>
-                    <p id={`remaining-${event.id}`}>{remaining}</p>
+                    <h3 style={{ textTransform: 'capitalize' }}>{event.title}</h3>
+                    <p>
+                        <i className="fa-regular fa-calendar fa-bounce"></i>
+                        { dates.formatDate(event.event_date)} <br /> {time}
+                    </p>
+                    <p className={isPassed ? 'status-red' : ''}>{remaining}</p>
                 </div>
             </div>
         </article>
