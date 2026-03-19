@@ -37,7 +37,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-[Video Walkthrough](https://imgur.com/a/eXfCN9X)
+[Video Walkthrough](https://i.imgur.com/xqy8vAc.gif)
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  GIF tool here
